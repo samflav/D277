@@ -3,7 +3,7 @@
 :root {
     --primary-bg: #A1867F;
     --secondary-bg: #AED4E6;
-    --primary-accent: #19297C;
+    --primary-accent: pink;
 }
 
 * {

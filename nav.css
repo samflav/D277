@@ -1,34 +1,78 @@
 nav {
     --primary-bg: var(--secondary-bg);
+    color: var(--primary-accent);
+    padding: 10px 10% 10px 10%;
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+
     display: grid;
-    grid-template-columns: 50px auto;
+    grid-template-columns: 40px 1fr 1fr;
     grid-template-areas:
-        "hamburger-button title"
-        "nav-links nav-links"
+        "hamburger-button title nav-links"
 }
 
 .hamburger-button {
+    all: unset;
     grid-area: hamburger-button;
-    background-color: lime;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hamburger-button svg path {
+    stroke: var(--primary-accent);
 }
 
 .title {
     grid-area: title;
-    text-align: right;
-    background-color: blue;
+    text-align: left;
+    padding: 0 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .nav-links {
     grid-area: nav-links;
-    display: flex;
-    text-align: center;
-    padding: 0 30%;
+    text-align: right;
+    padding: 0 0;
+
 }
 
 .nav-links a {
-    flex: 1;
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 10px;
+    display: inline-block;
+    position: relative;
 }
 
+.nav-links a::before,
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-accent);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
 
+.nav-links a::before {
+    top: 0;
+    transform-origin: left;
+}
 
+.nav-links a::after {
+    bottom: 0;
+    transform-origin: right;
+}
 
+.nav-links a:hover::before,
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
