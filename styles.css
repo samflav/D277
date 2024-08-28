@@ -1,0 +1,31 @@
+@import "nav.css";
+
+:root {
+    --primary-bg: #A1867F;
+    --secondary-bg: #AED4E6;
+    --primary-accent: #19297C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-bg);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+}
+
+.state-map {
+}
+
+.flair-img {
+}
+
+.flair-txt {
+}

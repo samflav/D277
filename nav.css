@@ -1,0 +1,34 @@
+nav {
+    --primary-bg: var(--secondary-bg);
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-areas:
+        "hamburger-button title"
+        "nav-links nav-links"
+}
+
+.hamburger-button {
+    grid-area: hamburger-button;
+    background-color: lime;
+}
+
+.title {
+    grid-area: title;
+    text-align: right;
+    background-color: blue;
+}
+
+.nav-links {
+    grid-area: nav-links;
+    display: flex;
+    text-align: center;
+    padding: 0 30%;
+}
+
+.nav-links a {
+    flex: 1;
+}
+
+
+
+
