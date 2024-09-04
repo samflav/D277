@@ -22,6 +22,11 @@ header {
 }
 
 .state-map {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 1px solid green;
 }
 
 .flair-img {
@@ -43,4 +48,11 @@ header {
     stroke-linejoin:round;
     stroke-miterlimit:4;
     stroke-opacity:1;
+}
+
+.joe {
+    font: 1000px sans-serif;
+    fill: black;
+    text-anchor: middle;
+    dominant-baseline: middle;
 }

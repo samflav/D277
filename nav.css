@@ -9,20 +9,22 @@ nav {
     width: 100%;
 
     display: grid;
-    grid-template-columns: 40px 1fr 1fr;
+    grid-template-columns: 40px 1fr 4fr;
     grid-template-areas:
         "hamburger-button title nav-links"
 }
 
-.hamburger-button {
+#hamburger-button {
     all: unset;
     grid-area: hamburger-button;
+    height: 25px;
+    width: 25px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.hamburger-button svg path {
+#hamburger-button svg path {
     stroke: var(--primary-accent);
 }
 
@@ -76,4 +78,40 @@ nav {
 .nav-links a:hover::before,
 .nav-links a:hover::after {
     transform: scaleX(1);
+}
+
+.sidebar {
+    color: var(--primary-accent);
+    height: 100%;
+    width: 20%;
+    max-width: 250px;
+    text-align: left;
+    background-color: var(--secondary-bg);
+    position: fixed;
+    overflow: auto;
+    opacity: 60%;
+    visibility: hidden;
+}
+
+.sidebar-item, .sidebar-main-item {
+    color: black;
+    background-color: var(--secondary-bg);
+    width:100%;
+    display:block;
+    padding: 8px 16px;
+    text-align:left;
+    white-space:normal;
+    float:none;
+    outline:0;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 100%;
+}
+
+.sidebar-item {
+    padding: 8px 32px;
+}
+
+.sidebar-item:hover, .sidebar-main-item:hover {
+    background-color: var(--primary-accent);
 }
