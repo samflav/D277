@@ -3,7 +3,7 @@ nav {
     padding: 10px 0;
     box-shadow: 0 3px 4px var(--primary-color);
 
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
 
