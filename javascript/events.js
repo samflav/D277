@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $("#nav-placeholder").load("/D277/assets/nav.html");
+
+    $("#nav-placeholder").load("/assets/nav.html");
 
     $(document).click(function(event) {
         if (document.getElementById("hamburger-button").contains(event.target)

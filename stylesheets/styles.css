@@ -1,19 +1,22 @@
+@import "/D277/stylesheets/nav.css"; /* To Fix running it in my IDE */
 @import "nav.css";
 
 :root {
-    --primary-bg: #A1867F;
-    --secondary-bg: #AED4E6;
-    --primary-accent: pink;
+    --background: #232323;
+    --primary-color: #b794f6;
+    --primary-text: #efe5fd;
+    font-family: monospace;
 }
 
 * {
     margin: 0;
     padding: 0;
-    background: var(--primary-bg);
+    background: var(--background);
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: roboto mono, monospace;
+    color: var(--primary-text);
     line-height: 1.6;
 }
 
@@ -45,7 +48,7 @@ header {
 
 .flair-txt {
     flex: 1;
-    border-left: 2px ridge var(--primary-accent);
+    border-left: 2px ridge var(--primary-color);
     padding: 5px;
     margin: 0 10px;
     display: flex;
@@ -53,11 +56,11 @@ header {
 }
 
 .city {
-    fill:#AED4E6;
+    fill: var(--primary-text);
 }
 
 #Pennsylvania {
-    fill: hotpink;
+    fill: var(--background);
 }
 
 .city-text {
