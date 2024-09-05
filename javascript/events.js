@@ -1,7 +1,8 @@
 
 $(document).ready(function(){
     $(document).click(function(event) {
-        if (document.getElementById("hamburger-button").contains(event.target)) {
+        if (document.getElementById("hamburger-button").contains(event.target)
+            || document.getElementById("sidebar").contains(event.target)) {
             manage_sidebar();
         } else {
             manage_sidebar("close");
