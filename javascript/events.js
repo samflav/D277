@@ -1,5 +1,6 @@
-
 $(document).ready(function(){
+    $("#nav-placeholder").load("/D277/assets/nav.html");
+
     $(document).click(function(event) {
         if (document.getElementById("hamburger-button").contains(event.target)
             || document.getElementById("sidebar").contains(event.target)) {
@@ -16,9 +17,6 @@ $(document).ready(function(){
     $(document).on('mouseout', '#hamburger-button', () => {
         document.body.style.cursor = '';
     });
-
-    $(document).on('click', '#hamburger-button', () => {
-    })
 });
 
 function manage_sidebar(method="none") {
