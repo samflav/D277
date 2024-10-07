@@ -35,3 +35,4 @@ function manage_sidebar(method="none") {
     }
 }
 
+
