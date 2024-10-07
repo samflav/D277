@@ -83,11 +83,10 @@ nav {
     color: var(--primary-color);
     height: 100%;
     width: 20%;
-    max-width: 250px;
     text-align: left;
     background-color: var(--background);
+    margin: 20px 0 0 0;
     position: fixed;
-    overflow: auto;
     opacity: 60%;
     visibility: hidden;
 }
