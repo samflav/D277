@@ -3,6 +3,7 @@
 
 :root {
     --background: #232323;
+    --2-bg: #696969;
     --primary-color: #b794f6;
     --primary-text: #efe5fd;
     font-family: monospace;
@@ -61,12 +62,12 @@ header {
 
 #Pennsylvania {
     color: var(--primary-text);
-    fill: hotpink;
+    filter: drop-shadow(50px 50px 50px var(--primary-color));
 }
 
 .city-text {
-    font: 1000px sans-serif;
-    fill: black;
+    font: 1000px monospace;
+    fill: var(--primary-text);
     text-anchor: middle;
     dominant-baseline: middle;
 }
