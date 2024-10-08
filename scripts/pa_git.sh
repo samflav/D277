@@ -1,17 +1,23 @@
 #!/bin/bash
 cd /home/delta/pa/D277/
+rm -rf staging/
 git pull
-for FILE in src/*.html; do
-	sed -i '/<div id=\"nav-placeholder\">/r src/assets/nav.html' $FILE
-	sed -i '/<div id=\"nav-placeholder\">/d' $FILE
-	echo "Fixing $FILE"
+cp -r /src/ staging/
+for FILE in staging/*.html; do
+	new=${new%.html}
+	sed '/<div id=\"nav-placeholder\">/r staging/assets/nav.html' $FILE > staging/$new
+	sed '/<div id=\"nav-placeholder\">/d' > staging/$new
+	rm $FILE
+	echo "Fixing $new"
 done
 for FILE in src/cities/*.html; do
-	sed -i '/<div id=\"nav-placeholder\">/r src/assets/nav.html' $FILE
-	sed -i '/<div id=\"nav-placeholder\">/d' $FILE
-	echo "Fixing $FILE"
+	new=${new%.html}
+	sed '/<div id=\"nav-placeholder\">/r staging/assets/nav.html' $FILE > staging/$new
+	sed '/<div id=\"nav-placeholder\">/d' > staging/$new
+	rm $FILE
+	echo "Fixing $new"
 done
 id=`docker ps -aqf "name=webserver"`
 docker exec $id rm -rf /var/www/pa/
-docker cp ./src/ $id:/var/www/pa/
+docker cp staging/ $id:/var/www/pa/
 
