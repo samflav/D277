@@ -11,9 +11,9 @@ nav {
     width: 100%;
 
     display: grid;
-    grid-template-columns: 40px 1fr 4fr;
+    grid-template-columns: 40px 1fr 4fr 10px;
     grid-template-areas:
-        "hamburger-button title nav-links"
+        "hamburger-button title nav-links none"
 }
 
 #spacer {
@@ -46,8 +46,6 @@ nav {
 .nav-links {
     grid-area: nav-links;
     text-align: right;
-    padding: 0 0;
-
 }
 
 .nav-links a {
@@ -94,21 +92,19 @@ nav {
     width: 20%;
     text-align: left;
     background-color: var(--background);
-    margin: 20px 0 0 0;
     position: fixed;
-    opacity: 60%;
+    opacity: 80%;
     visibility: hidden;
-    margin-top: 46px;
+    margin: 46px 0 0;
 }
 
-.sidebar-item, .sidebar-main-item {
+.sidebar-item {
     color: var(--primary-text);
     background-color: var(--background);
-    width: 100%;
     display: block;
     padding: 8px 16px;
     text-align: left;
-    white-space: normal;
+    white-space: pre;
     float: none;
     outline: 0;
     font-weight: bold;
@@ -116,11 +112,7 @@ nav {
     opacity: 100%;
 }
 
-.sidebar-item {
-    padding: 8px 32px;
-}
-
-.sidebar-item:hover, .sidebar-main-item:hover {
+.sidebar-item:hover {
     background-color: var(--primary-color);
     color: var(--background);
 }

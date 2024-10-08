@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-    $("#nav-placeholder").load("./assets/nav.html");
+    let path = window.location.pathname;
+    console.log(path);
+    $("#nav-placeholder").load("/assets/nav.html");
 
     $(document).click(function(event) {
         if (document.getElementById("hamburger-button").contains(event.target)
