@@ -1,8 +1,8 @@
 #!/bin/bash
-cd /home/delta/pa/D277/
+cd /home/delta/pa/
 rm -rf staging/
-git pull
-cp -r /src/ staging/
+#git pull
+cp -r D277/src/ staging/
 for FILE in staging/*.html; do
 	new=${new%.html}
 	sed '/<div id=\"nav-placeholder\">/r staging/assets/nav.html' $FILE > staging/$new
