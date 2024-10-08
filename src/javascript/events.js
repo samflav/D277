@@ -1,8 +1,19 @@
 $(document).ready(function(){
 
-    let path = window.location.pathname;
-    console.log(path);
-    $("#nav-placeholder").load("/assets/nav.html");
+    let nav_path = ""
+    if (window.location.pathname.includes("D277")) {
+        nav_path = "/D277/src/assets/nav.html" //put here to fix routing in my IDE...
+    } else {
+        nav_path = "/assets/nav.html"
+    }
+
+    $("#nav-placeholder").load(nav_path, function() {
+        let link = document.getElementById("Specific-Link")
+        if (link) {
+            document.getElementById("Generic-Link").replaceWith(link);
+            link.style.visibility = "visible";
+        }
+    });
 
     $(document).click(function(event) {
         if (document.getElementById("hamburger-button").contains(event.target)
