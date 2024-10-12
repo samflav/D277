@@ -32,7 +32,7 @@ function replace_link() {
     let link = document.getElementById("Specific-Link")
     if (link) {
         document.getElementById("Generic-Link").replaceWith(link);
-        link.style.visibility = "visible";
+        link.style.display = "none";
     }
 }
 
