@@ -72,6 +72,12 @@ header {
 }
 
 #references p {
+    padding: 30px;
     text-indent:-75px;
-    margin-left:75px
+    margin-left:75px;
+}
+
+.content-section {
+    text-align: center;
+    padding: 30px;
 }
