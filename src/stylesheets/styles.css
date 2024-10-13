@@ -70,3 +70,8 @@ header {
     text-anchor: middle;
     dominant-baseline: middle;
 }
+
+#references p {
+    text-indent:-75px;
+    margin-left:75px
+}

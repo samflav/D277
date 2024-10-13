@@ -43,9 +43,10 @@ nav {
     transform: translateY(-50%);
 }
 
-.nav-links {
+#nav-links {
     grid-area: nav-links;
     text-align: right;
+    display: none;
 }
 
 .nav-links a {
