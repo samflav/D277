@@ -48,4 +48,5 @@ tr:nth-child(even) td {
 
 .rest-list {
     border: none !important;
+    padding-left: 50px;
 }

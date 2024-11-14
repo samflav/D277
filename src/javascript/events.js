@@ -32,9 +32,8 @@ function replace_link() {
     let link = document.getElementById("Specific-Link")
     if (link) {
         document.getElementById("Generic-Link").replaceWith(link);
-        link.style.display = "inline-block";
-        document.getElementById("nav-links").style.display = "contents";
     }
+    document.getElementById("nav-links").style.display = "contents";
 }
 
 
