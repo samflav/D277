@@ -33,7 +33,7 @@ function replace_link() {
     if (link) {
         document.getElementById("Generic-Link").replaceWith(link);
     }
-    document.getElementById("nav-links").style.display = "contents";
+    document.getElementById("nav-links").style.display = "inline-block";
 }
 
 
