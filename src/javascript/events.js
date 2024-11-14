@@ -31,6 +31,7 @@ function toggle_sidebar(event) {
 function replace_link() {
     let link = document.getElementById("Specific-Link")
     if (link) {
+        link.style.display = "content";
         document.getElementById("Generic-Link").replaceWith(link);
     }
     document.getElementById("nav-links").style.display = "inline-block";

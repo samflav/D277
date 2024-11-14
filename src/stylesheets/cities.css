@@ -37,6 +37,10 @@
     font-weight: bold;
 }
 
+.stats tr td {
+    padding: 0.5em;
+}
+
 .row-headers {
     text-align: right;
     font-weight: bold;
@@ -49,4 +53,9 @@ tr:nth-child(even) td {
 .rest-list {
     border: none !important;
     padding-left: 50px;
+}
+
+.flair-img {
+    object-fit: cover;
+    max-height: 500px;
 }
