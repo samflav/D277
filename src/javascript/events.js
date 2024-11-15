@@ -49,8 +49,10 @@ function replace_link() {
 function validate_emails() {
     if (document.getElementById("email").value.trim() === document.getElementById("c-email").value.trim()) {
         document.getElementById("email-error").style.display = "none";
+        document.getElementById("submit").disabled = false;
     } else {
         document.getElementById("email-error").style.display = "contents";
+        document.getElementById("submit").disabled = true;
     }
 }
 
