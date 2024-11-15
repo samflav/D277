@@ -30,7 +30,16 @@ form {
     vertical-align: top;
 }
 
-#submit {
-    width: 100px;
+#submit-fields {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#submit-fields div {
+    float: right;
+    width: 50%;
 }
 
+#submit {
+    width: 50%;
+}

@@ -28,8 +28,7 @@
 }
 
 .stats {
-    margin-left: auto;
-    margin-right: auto;
+    left: 50%;
 }
 
 .stats tr th {
@@ -69,4 +68,3 @@ tr:nth-child(even) td {
     object-fit: cover;
     max-height: 500px;
 }
-
