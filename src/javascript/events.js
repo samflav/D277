@@ -1,7 +1,12 @@
 $(document).ready(function(){
 
-
-    replace_link();
+    if ($('#nav-placeholder').length > 0) {  //Only for dev reasons, when it is pushed to the server it replaces the placeholder with the navbar
+        $('#nav-placeholder').load("/assets/nav.html", function() {
+            replace_link();
+        });
+    } else {
+        replace_link();
+    }
 
     $(document).click(function(event) {
         toggle_sidebar(event);
@@ -13,6 +18,10 @@ $(document).ready(function(){
 
     $(document).on('mouseout', '#hamburger-button', () => {
         document.body.style.cursor = '';
+    });
+
+    $(document).on('input', '#c-email', () => {
+        validate_emails();
     });
 });
 
@@ -35,6 +44,14 @@ function replace_link() {
         document.getElementById("Generic-Link").replaceWith(link);
     }
     document.getElementById("nav-links").style.display = "inline-block";
+}
+
+function validate_emails() {
+    if (document.getElementById("email").value.trim() === document.getElementById("c-email").value.trim()) {
+        document.getElementById("email-error").style.display = "none";
+    } else {
+        document.getElementById("email-error").style.display = "contents";
+    }
 }
 
 

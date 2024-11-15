@@ -1,0 +1,36 @@
+#inputs {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+label {
+    text-align: right;
+}
+
+input, textarea  {
+    color: inherit;
+    width: 500px;
+}
+
+form {
+    align-items: center;
+    text-align: center;
+}
+
+#email-error {
+    color: red;
+    display: none;
+}
+
+#msg-lbl {
+    vertical-align: top;
+}
+
+#submit {
+    width: 100px;
+}
+

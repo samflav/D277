@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/contact.css">
+    <script src="/javascript/jquery-3.7.1.min.js"></script>
+    <script src="/javascript/events.js"></script>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<header><h1>Contact Us</h1></header>
+
+<form>
+    <div id="inputs">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" placeholder="e.g. John">
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" placeholder="e.g. Doe">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="e.g. john.doe@gmail.com">
+        <label for="c-email">Confirm Email:</label>
+        <div id="con-email">
+            <input type="text" id="c-email" name="c-email" placeholder="e.g. john.doe@gmail.com">
+            <span id="email-error">* Emails must match</span>
+        </div>
+        <label for="msg" id="msg-lbl">Message to us:</label>
+        <textarea id="msg" name="msg" rows="4" cols="50" placeholder="Write your message here!"></textarea>
+    </div>
+
+    <input type="submit" value="Submit" id="submit">
+</form>
+
+</body>
+</html>
