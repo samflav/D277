@@ -36,7 +36,7 @@ header {
 .flair {
     display: flex;
     width: 80%;
-    min-width: 1000px;
+    min-width: 1500px;
     margin: 20px auto;
 }
 
